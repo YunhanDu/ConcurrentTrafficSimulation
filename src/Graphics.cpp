@@ -15,6 +15,12 @@ void Graphics::simulate()
 
         // update graphics
         this->drawTrafficObjects();
+        char keypress = cv::waitKey(33);
+        if (keypress == 'q')
+        {
+            cv::destroyAllWindows();
+            break;
+        }
     }
 }
 
